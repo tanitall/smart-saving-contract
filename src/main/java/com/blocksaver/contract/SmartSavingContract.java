@@ -6,16 +6,14 @@ public class SmartSavingContract extends SmartContract {
 
     public static Object Main(String operation, Object... args) {
 
-        switch (operation) {
-            case "addFunds": {
-                return addFunds((String) args[0], (byte[]) args[1]);
-            }
-            case "createSavingsAccount": {
-                return createSavingsAccount((String) args[0]);
-            }
-            case "closeSavingsAccount": {
-                return closeSavingsAccount((String) args[0], (byte[]) args[1], (byte[]) args[2]);
-            }
+        if("addFunds".equals(operation)) {
+            return addFunds((String) args[0], (byte[]) args[1]);
+        }
+        if("createSavingsAccount".equals(operation)) {
+            return createSavingsAccount((String) args[0]);
+        }
+        if("closeSavingsAccount".equals(operation)) {
+            return closeSavingsAccount((String) args[0], (byte[]) args[1], (byte[]) args[2]);
         }
         return false;
 
