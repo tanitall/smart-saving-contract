@@ -4,7 +4,7 @@ import org.neo.smartcontract.framework.SmartContract;
 
 public class SmartSavingContract extends SmartContract {
 
-    public static Object main(String operation, Object... args) {
+    public static Object Main(String operation, Object... args) {
 
         switch (operation) {
             case "addFunds": {
