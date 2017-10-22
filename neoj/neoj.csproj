@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Copyright>2016-2017 The Neo Project</Copyright>
+    <AssemblyTitle>Neo.Compiler.JVM</AssemblyTitle>
+    <Version>2.0.3</Version>
+    <Authors>The Neo Project</Authors>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <AssemblyName>neoj</AssemblyName>
+    <PackageId>Neo.Compiler.JVM</PackageId>
+    <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+    <RuntimeFrameworkVersion>2.0.0</RuntimeFrameworkVersion>
+    <RootNamespace>Neo.Compiler</RootNamespace>
+    <Company>The Neo Project</Company>
+    <Product>Neo.Compiler.JVM</Product>
+    <Description>Neo.Compiler.JVM</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>RELEASE;NETCOREAPP1_1</DefineConstants>
+    <DebugType>none</DebugType>
+    <DebugSymbols>False</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Neo.VM" Version="2.0.3" />
+    <PackageReference Include="SharpZipLib.NETStandard" Version="0.86.0.1" />
+  </ItemGroup>
+</Project>
